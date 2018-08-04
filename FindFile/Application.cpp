@@ -22,5 +22,6 @@ int Application::Start(int args, char* argv[])
     return 1;
   }
 
+  std::cout << argv[1] << " " << file_size(argv[1]) << '\n';
   return 0;
 }
