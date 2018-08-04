@@ -1,11 +1,11 @@
 
 #include "Application.h"
 
-int main()
+int main(int args, char* argv[])
 {
 
   Application app;
   
-  return app.Start();
+  return app.Start(args, argv[]);
 
 }

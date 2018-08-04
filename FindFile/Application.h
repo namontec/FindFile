@@ -5,7 +5,7 @@ public:
   Application();
   ~Application();
 
-  int Start();
+  int Start(int args, char* argv[]);
 
 };
 

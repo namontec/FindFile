@@ -11,7 +11,7 @@ Application::~Application()
 {
 }
 
-int Application::Start()
+int Application::Start(int args, char* argv[])
 {
   return 0;
 }
