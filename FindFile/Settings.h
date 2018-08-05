@@ -2,6 +2,7 @@
 
 #include<string>
 #include<vector>
+#include<map>
 #include<iostream>
 
 using namespace std;
@@ -13,7 +14,7 @@ public:
   ~Settings();
 
   int parse();
-  string* getSearchString();
+  string* getInputFileName();
   string* getPath();
   string* getOutputFileName();
 
@@ -26,9 +27,10 @@ private:
   char**  arguments_;
   int     argumentsSize_;
 
-  string* path_;
-  string* searchString_;
-  string* outputFile_;
+  string  path_       = "./";
+  string  fileMask_   = "*.*";
+  string  inputFile_;
+  string  outputFile_ = "results.txt";
 
 };
 

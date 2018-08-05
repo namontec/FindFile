@@ -19,7 +19,7 @@ int Application::Start(int args, char* argv[])
 {
   if (args < 2)
   {
-    std::cout << "Usage: findfile.exe path\n";
+    std::cout << "Usage: ff.exe -p <path> -m <mask> -i <input file> -o <output file>\n";
     return 1;
   }
   //std::cout << argv[1] << " " << file_size(argv[1]) << '\n';
