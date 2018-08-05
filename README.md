@@ -5,7 +5,7 @@ FindFile -p “C:\Temp” -m “*.*” -i “String.txt” -o “Result.txt”,
 
 -p – path to files; 
 
--m – filename mask where to search;   
+-m – filename mask;   
 
 -i – path to input string file;
 
