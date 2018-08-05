@@ -36,17 +36,15 @@ int Settings::parseArguments()
 
   for (int i = 0; i < argumentsSize_ - 1; i++)
   {
-    //cout << i << ":" << arguments_[i] << " ";
-    //string forTest = arguments_[i];
-    //cout << "[" << forTest << "] ";
+    string command = arguments_[i];
 
-    if (forTest == "-p")
+    if (command == "-p")
       path_ = arguments_[++i];
-    else if (forTest == "-m")
+    else if (command == "-m")
       fileMask_ = arguments_[++i];
-    else if (forTest == "-i")
+    else if (command == "-i")
       inputFile_ = arguments_[++i];
-    else if (forTest == "-o")
+    else if (command == "-o")
       outputFile_ = arguments_[++i];
   }
 
