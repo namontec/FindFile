@@ -1,8 +1,11 @@
 #pragma once
+
+#include "Settings.h"
+
 class Search
 {
 public:
-  Search();
+  Search(Settings& settings);
   ~Search();
 };
 

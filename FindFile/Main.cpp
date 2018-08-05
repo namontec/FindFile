@@ -3,9 +3,6 @@
 
 int main(int args, char* argv[])
 {
-
-  Application app;
-  
+  Application app; 
   return app.Start(args, argv);
-
 }

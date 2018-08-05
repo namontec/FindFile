@@ -2,7 +2,7 @@
 
 
 
-Command::Command()
+Command::Command(Settings& settings)
 {
 }
 

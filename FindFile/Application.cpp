@@ -4,6 +4,7 @@
 
 Application::Application()
 {
+
 }
 
 
@@ -18,10 +19,23 @@ int Application::Start(int args, char* argv[])
 {
   if (args < 2)
   {
-    std::cout << "Usage: findfile path\n";
+    std::cout << "Usage: findfile.exe path\n";
     return 1;
   }
+  //std::cout << argv[1] << " " << file_size(argv[1]) << '\n';
 
-  std::cout << argv[1] << " " << file_size(argv[1]) << '\n';
+
+  Settings settings(args, argv);
+  File fileOperations(settings);
+
+  //vector<string>* filesList = fileOperations.getFilesList();
+  //if (filesList->size == 0)
+  //{
+  //  return 1;
+  //}
+
+  Command commandLine(settings);
+  Search search(settings);
+
   return 0;
 }

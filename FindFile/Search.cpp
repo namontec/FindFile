@@ -2,7 +2,7 @@
 
 
 
-Search::Search()
+Search::Search(Settings& settings)
 {
 }
 

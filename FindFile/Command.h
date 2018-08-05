@@ -1,8 +1,11 @@
 #pragma once
+
+#include "Settings.h"
+
 class Command
 {
 public:
-  Command();
+  Command(Settings& settings);
   ~Command();
 };
 
