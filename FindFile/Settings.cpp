@@ -34,8 +34,7 @@ string* Settings::getOutputFileName()
 int Settings::parseArguments()
 {
 
-  for (int i = 0; i < argumentsSize_ - 1; i++)
-  {
+  for (int i = 0; i < argumentsSize_ - 1; i++) {
     string command = arguments_[i];
 
     if (command == "-p")
