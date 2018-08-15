@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="FindFIle">
+      <UniqueIdentifier>{205f02cf-5fa2-4c9b-a12f-5fd5a1949451}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -21,6 +24,24 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SettingsTest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FindFile\File.h">
+      <Filter>FindFIle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FindFile\Search.h">
+      <Filter>FindFIle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FindFile\Command.h">
+      <Filter>FindFIle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FindFile\Settings.h">
+      <Filter>FindFIle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\FindFile\Application.h">
+      <Filter>FindFIle</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -28,6 +49,27 @@
     </ClCompile>
     <ClCompile Include="unittest1.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingsTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FindFile\Settings.cpp">
+      <Filter>FindFIle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FindFile\Search.cpp">
+      <Filter>FindFIle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FindFile\Main.cpp">
+      <Filter>FindFIle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FindFile\File.cpp">
+      <Filter>FindFIle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FindFile\Command.cpp">
+      <Filter>FindFIle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\FindFile\Application.cpp">
+      <Filter>FindFIle</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

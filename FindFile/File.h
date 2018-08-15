@@ -1,23 +1,25 @@
 #pragma once
 
-
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <boost/filesystem.hpp>
+//#include <boost/filesystem.hpp>
+
+//using namespace boost::filesystem;
 
 #include "Settings.h"
 
-using namespace boost::filesystem;
+
+  class File
+  {
+  public:
+    File();
+    File(Settings& settings);
+    ~File();
+
+    vector<string>* getFilesList();
+  };
 
 
 
-class File
-{
-public:
-  File(Settings& settings);
-  ~File();
-
-  vector<string>* getFilesList();
-};
 

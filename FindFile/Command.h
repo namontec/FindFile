@@ -2,10 +2,13 @@
 
 #include "Settings.h"
 
-class Command
-{
-public:
-  Command(Settings& settings);
-  ~Command();
-};
+
+
+
+  class Command
+  {
+  public:
+    Command(Settings& settings);
+    ~Command();
+  };
 

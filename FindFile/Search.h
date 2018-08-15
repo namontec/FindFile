@@ -2,10 +2,12 @@
 
 #include "Settings.h"
 
-class Search
-{
-public:
-  Search(Settings& settings);
-  ~Search();
-};
+
+
+  class Search
+  {
+  public:
+    Search(Settings& settings);
+    ~Search();
+  };
 

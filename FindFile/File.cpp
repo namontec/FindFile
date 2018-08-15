@@ -2,6 +2,12 @@
 
 
 
+File::File()
+{
+
+}
+
+
 File::File(Settings& settings)
 {
   
@@ -13,7 +19,15 @@ File::File(Settings& settings)
 }
 
 
+
 File::~File()
 {
 
+}
+
+
+
+vector<string>* File::getFilesList()
+{
+  return nullptr;
 }

@@ -38,11 +38,11 @@ int Settings::parseArguments()
     string command = arguments_[i];
 
     if (command == "-p")
-      path_ = arguments_[++i];
+      path_       = arguments_[++i];
     else if (command == "-m")
-      fileMask_ = arguments_[++i];
+      fileMask_   = arguments_[++i];
     else if (command == "-i")
-      inputFile_ = arguments_[++i];
+      inputFile_  = arguments_[++i];
     else if (command == "-o")
       outputFile_ = arguments_[++i];
   }
