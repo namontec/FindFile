@@ -11,7 +11,7 @@ namespace UnitTests
   {
   public:
     
-    TEST_METHOD(getInputFileNameTest)
+    TEST_METHOD(__OTHERgetInputFileNameTest)
     {
       
       File* file = new File();
@@ -24,7 +24,7 @@ namespace UnitTests
     }
 
 
-    TEST_METHOD(getPath)
+    TEST_METHOD(__OTHERgetPath)
     {
       Assert::AreEqual(1, 2);
     }

@@ -11,21 +11,42 @@ namespace UnitTests
 {
   TEST_CLASS(SettingsTest)
   {
+
+  private:
+    string path = { "c:\temp" };
+    string inputFileName = { "string.txt" };
+    string outputFileName= {"result.txt"};
+
+    char* argv[10] = { "ff.exe", "-p", "c:\temp", "-m", ".", "-i", "string.txt", "-o", "result.txt", 0 };
+    int args = 10;
+
+
   public:
 
-    TEST_METHOD(TestMethod4)
+    TEST_METHOD(getPath)
     {
-      string* path = new string("c:\temp");
-
-      char* argv[] = { "ff.exe", "-p", "c:\temp", "-m", ".", "-i", "string.txt", "-o", "result.txt", 0 };
-      int args = 10;
-
       Settings* settings = new Settings(args, argv);
-
-  
-      
+      Assert::AreEqual( path, *(settings->getPath()) );  
+      Assert::AreNotEqual(path, "_" + *(settings->getPath()) );
     }
 
+
+
+    TEST_METHOD(getInputFileName)
+    {
+      Settings* settings = new Settings(args, argv);
+      Assert::AreEqual(inputFileName, *(settings->getInputFileName()));
+      Assert::AreNotEqual(inputFileName, "_" + *(settings->getInputFileName()));
+    }
+
+
+
+    TEST_METHOD(getOutputFileName)
+    {
+      Settings* settings = new Settings(args, argv);
+      Assert::AreEqual(outputFileName, *(settings->getOutputFileName()));
+      Assert::AreNotEqual(outputFileName, "_" + *(settings->getOutputFileName()));
+    }
 
   };
 }
