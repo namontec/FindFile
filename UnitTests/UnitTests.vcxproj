@@ -159,7 +159,6 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CommandTest.cpp" />
     <ClCompile Include="FileTest.cpp" />
     <ClCompile Include="SearchTest.cpp" />
     <ClCompile Include="SettingsTest.cpp" />

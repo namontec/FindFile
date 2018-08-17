@@ -28,6 +28,11 @@ string* Settings::getOutputFileName()
   return &outputFile_;
 }
 
+string * Settings::getFileMask()
+{
+  return &fileMask_;
+}
+
 
 
 

@@ -19,6 +19,7 @@ using namespace std;
     string* getInputFileName();
     string* getPath();
     string* getOutputFileName();
+    string* getFileMask();
 
 
   private:

@@ -34,7 +34,6 @@ int Application::Start(int args, char* argv[])
   //  return 1;
   //}
 
-  Command commandLine(settings);
   Search search(settings);
 
   return 0;

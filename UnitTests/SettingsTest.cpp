@@ -14,10 +14,12 @@ namespace UnitTests
 
   private:
     string path = { "c:\temp" };
+    string fileMask = { "*.txt" };
     string inputFileName = { "string.txt" };
     string outputFileName= {"result.txt"};
 
-    char* argv[10] = { "ff.exe", "-p", "c:\temp", "-m", ".", "-i", "string.txt", "-o", "result.txt", 0 };
+
+    char* argv[10] = { "ff.exe", "-p", "c:\temp", "-m", "*.txt", "-i", "string.txt", "-o", "result.txt", 0 };
     int args = 10;
 
 
@@ -46,6 +48,14 @@ namespace UnitTests
       Settings* settings = new Settings(args, argv);
       Assert::AreEqual(outputFileName, *(settings->getOutputFileName()));
       Assert::AreNotEqual(outputFileName, "_" + *(settings->getOutputFileName()));
+    }
+
+
+    TEST_METHOD(getFileMask) 
+    {
+      Settings* settings = new Settings(args, argv);
+      Assert::AreEqual(fileMask, *(settings->getFileMask()));
+      Assert::AreNotEqual(fileMask, "_" + *(settings->getFileMask()));
     }
 
   };

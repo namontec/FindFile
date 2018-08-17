@@ -8,7 +8,6 @@
 
 #include "Settings.h"
 #include "File.h"
-#include "Command.h"
 #include "Search.h"
 
 
