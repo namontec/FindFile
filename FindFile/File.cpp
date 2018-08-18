@@ -8,7 +8,7 @@ File::File()
 }
 
 
-File::File(Settings& settings)
+File::File(Settings* settings)
 {
   
   //ofstream myfile;

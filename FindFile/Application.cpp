@@ -26,7 +26,7 @@ int Application::Start(int args, char* argv[])
 
 
   Settings settings(args, argv);
-  File fileOperations(settings);
+  File fileOperations(&settings);
 
   //vector<string>* filesList = fileOperations.getFilesList();
   //if (filesList->size == 0)
@@ -34,7 +34,7 @@ int Application::Start(int args, char* argv[])
   //  return 1;
   //}
 
-  Search search(settings);
+  Search search(&settings);
 
   return 0;
 }

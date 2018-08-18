@@ -7,7 +7,7 @@
   class Search
   {
   public:
-    Search(Settings& settings);
+    Search(Settings* settings);
     ~Search();
   };
 
