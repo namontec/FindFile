@@ -159,7 +159,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DirectoryTest.cpp" />
-    <ClCompile Include="FileTest.cpp" />
     <ClCompile Include="SearchTest.cpp" />
     <ClCompile Include="SettingsTest.cpp" />
     <ClCompile Include="stdafx.cpp">

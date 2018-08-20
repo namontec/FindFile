@@ -4,10 +4,8 @@
 #include <vector>
 #include <string>
 #include <algorithm> 
-#include <boost/function.hpp>
 
 #include "Settings.h"
-#include "File.h"
 #include "Search.h"
 #include "Directory.h"
 
@@ -19,7 +17,7 @@ public:
   Application();
   ~Application();
 
-  int Start(int args, char* argv[]);
+  int start(int args, char* argv[]);
 
 };
 

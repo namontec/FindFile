@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Settings.h"
-#include "File.h"
 #include "Directory.h"
 
 
@@ -12,8 +11,10 @@
     Search(Settings& settings);
     ~Search();
 
-    int SearchFromFile();
-    int SearchFromString();
-    int SearchFromBuffer();
+    int searchFile();
+    int searchString();
+
+  private:
+    int searchBuffer();
   };
 

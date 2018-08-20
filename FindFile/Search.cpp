@@ -45,17 +45,17 @@ Search::~Search()
 {
 }
 
-int Search::SearchFromFile()
+int Search::searchFile()
 {
   return 0;
 }
 
-int Search::SearchFromString()
+int Search::searchString()
 {
   return 0;
 }
 
-int Search::SearchFromBuffer()
+int Search::searchBuffer()
 {
   return 0;
 }
