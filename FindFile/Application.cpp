@@ -15,7 +15,7 @@ Application::~Application()
 
 
 
-int Application::Start(int args, char* argv[])
+int Application::start(int args, char* argv[])
 {
   if (args < 2) {
     std::cout << "Usage: ff.exe -p <path> -m <mask> -i <input file> -o <output file>\n";
@@ -25,11 +25,11 @@ int Application::Start(int args, char* argv[])
   Settings settings(args, argv);
 
   Search search(settings);
-  if (settings.getInputString) {
-    search.SearchString();
+  if (settings.getInputString() != "") {
+    search.searchString();
   }
   else {
-    search.SearchFile();
+    search.searchFile();
   }
 
 

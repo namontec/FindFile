@@ -2,6 +2,7 @@
 
 #include "Settings.h"
 #include "Directory.h"
+#include "Settings.h"
 
 
 
@@ -16,5 +17,9 @@
 
   private:
     int searchBuffer();
+
+  private:
+    Settings& settings_;
+    char* inputBuffer_;
   };
 

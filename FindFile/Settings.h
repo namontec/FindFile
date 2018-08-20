@@ -3,7 +3,7 @@
 #include<string>
 #include<vector>
 #include<map>
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -36,6 +36,5 @@ using namespace std;
     string inputFile_;
     string inputString_;
     string outputFile_ = "results.txt";
-
   };
 
