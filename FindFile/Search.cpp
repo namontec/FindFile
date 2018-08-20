@@ -6,7 +6,19 @@
 Search::Search(Settings& settings)
 {
   ofstream outputFile(settings.getOutputFileName());
-  ifstream inputFile(settings.getOutputFileName(), ios::binary | ios::in);
+
+  // Read Input file to memory (search data)
+  ifstream inputFile(settings.getInputFileName, ios::binary | ios::ate);
+  streampos inputSize;
+  char* inputBuffer;
+  if (inputFile.is_open())
+  {
+    inputSize   = inputFile.tellg;
+    inputBuffer = new char[inputSize];
+    inputFile.seekg(0, ios::beg);
+    inputFile.read(inputBuffer, inputSize);
+    inputFile.close();
+  }
 
   Directory dir(settings.getPath());
   int countFound{ 0 };
