@@ -11,5 +11,9 @@
   public:
     Search(Settings& settings);
     ~Search();
+
+    int SearchFromFile();
+    int SearchFromString();
+    int SearchFromBuffer();
   };
 

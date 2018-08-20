@@ -6,7 +6,7 @@
 Search::Search(Settings& settings)
 {
   ofstream outputFile(settings.getOutputFileName());
-  ifstream inputFile; // (settings.getInputFileName);
+  ifstream inputFile(settings.getOutputFileName(), ios::binary | ios::in);
 
   Directory dir(settings.getPath());
   int countFound{ 0 };
@@ -15,8 +15,8 @@ Search::Search(Settings& settings)
     //cout << x << endl;
     outputFile << x << endl;
     countFound++;
+    //std::search(;
   }
-
 
   outputFile.close();
   
@@ -31,4 +31,19 @@ Search::Search(Settings& settings)
 
 Search::~Search()
 {
+}
+
+int Search::SearchFromFile()
+{
+  return 0;
+}
+
+int Search::SearchFromString()
+{
+  return 0;
+}
+
+int Search::SearchFromBuffer()
+{
+  return 0;
 }

@@ -17,23 +17,25 @@ using namespace std;
 
     int parse();
     string getInputFileName();
+    string getInputString();
     string getPath();
     string getOutputFileName();
     string getFileMask();
 
 
   private:
-    int     parseArguments();
+    int    parseArguments();
 
 
   private:
-    char**  arguments_;
-    int     argumentsSize_;
+    char** arguments_;
+    int    argumentsSize_;
 
-    string  path_ = "./";
-    string  fileMask_ = "*.*";
-    string  inputFile_;
-    string  outputFile_ = "results.txt";
+    string path_ = "./";
+    string fileMask_ = "*.*";
+    string inputFile_;
+    string inputString_;
+    string outputFile_ = "results.txt";
 
   };
 

@@ -28,5 +28,6 @@ int Application::Start(int args, char* argv[])
 
   Search search(settings);
 
+
   return 0;
 }
