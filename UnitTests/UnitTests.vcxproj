@@ -100,7 +100,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;C:\namontec\app\FindFile\FindFile\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Application.obj;Command.obj;File.obj;Main.obj;Search.obj;Settings.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Application.obj;File.obj;Main.obj;Search.obj;Settings.obj;Directory.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -159,6 +159,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DirectoryTest.cpp" />
     <ClCompile Include="FileTest.cpp" />
     <ClCompile Include="SearchTest.cpp" />
     <ClCompile Include="SettingsTest.cpp" />
