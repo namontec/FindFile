@@ -14,7 +14,7 @@
   {
   public:
     File();
-    File(Settings* settings);
+    File(Settings& settings);
     ~File();
 
     vector<string>* getFilesList();

@@ -1,13 +1,15 @@
 #pragma once
 
 #include "Settings.h"
+#include "File.h"
+#include "Directory.h"
 
 
 
   class Search
   {
   public:
-    Search(Settings* settings);
+    Search(Settings& settings);
     ~Search();
   };
 
