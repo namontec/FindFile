@@ -9,6 +9,7 @@
 #include "Settings.h"
 #include "File.h"
 #include "Search.h"
+#include "Directory.h"
 
 
 

@@ -26,6 +26,13 @@ int Application::Start(int args, char* argv[])
 
 
   Settings settings(args, argv);
+  Directory dir(settings.getPath());
+
+  for (auto x : dir.getDirectory())
+  {
+    cout << x << endl;
+  }
+
   File fileOperations(&settings);
 
   //vector<string>* filesList = fileOperations.getFilesList();

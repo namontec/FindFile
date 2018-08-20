@@ -13,24 +13,24 @@ Settings::~Settings()
 {
 }
 
-string* Settings::getInputFileName()
+string Settings::getInputFileName()
 {
-  return &inputFile_;
+  return inputFile_;
 }
 
-string* Settings::getPath()
+string Settings::getPath()
 {
-  return &path_;
+  return path_;
 }
 
-string* Settings::getOutputFileName()
+string Settings::getOutputFileName()
 {
-  return &outputFile_;
+  return outputFile_;
 }
 
-string* Settings::getFileMask()
+string Settings::getFileMask()
 {
-  return &fileMask_;
+  return fileMask_;
 }
 
 

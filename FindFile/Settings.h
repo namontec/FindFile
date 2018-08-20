@@ -16,10 +16,10 @@ using namespace std;
     ~Settings();
 
     int parse();
-    string* getInputFileName();
-    string* getPath();
-    string* getOutputFileName();
-    string* getFileMask();
+    string getInputFileName();
+    string getPath();
+    string getOutputFileName();
+    string getFileMask();
 
 
   private:
