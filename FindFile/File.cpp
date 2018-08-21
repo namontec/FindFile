@@ -1,7 +1,6 @@
 #include "File.h"
 
 
-
 File::File()
 {
 }
@@ -56,6 +55,9 @@ unsigned int File::getSize()
   return size_;
 }
 
+
+
+
 bool File::compare(File& fileToCompare)
 {
   bool fileTooSmall = getSize() > fileToCompare.getSize();
@@ -68,6 +70,9 @@ bool File::compare(File& fileToCompare)
   }
   return false;
 }
+
+
+
 
 int File::clear()
 {
