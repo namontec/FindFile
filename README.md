@@ -1,22 +1,24 @@
 # FindFile
-Command line utility for searching files
+### Command line utility for searching files
 
-FindFile -p “C:\Temp” -m “*.*” -i “String.txt” -o “Result.txt”,
+Usage: `ff.exe -p C:\Temp -m *.* -i StringInFile.txt -is SearchString -o Result.txt`
 
--p – path to files; 
+`-p` path to files; 
 
--m – filename mask;   
+`-m` filename mask _ _(not impemented)_ _;   
 
--i – path to input string file;
+`-i` path to file with search, or
+`-is` search string;
 
--o – path to results file.
+`-o` results file.
 
 ---
 
--p - путь к обрабатываемой директории с файлами;
+`-p` путь к обрабатываемой директории с файлами;
 
--m – маска имен файлов, в которых осуществляется поиск;    
+`-m` маска имен файлов, в которых осуществляется поиск _ _(не реализовано)_ _;    
 
--i – путь к файлу с заданной подстрокой;
+`-i` путь к файлу с заданной подстрокой, 
+или `-is` строка для поиска;
 
--o – путь к файлу с результатами поиска.
+`-o` файл с результатами поиска.
