@@ -20,15 +20,8 @@ Search::~Search()
 int Search::searchFile()
 {
   // Read Input file to memory (inputBuffer)
-  ifstream inputFile(settings_.getInputFileName(), ios::binary | ios::ate);
+  double size = readFileToMemory(inputBuffer_, settings_.getInputFileName());
 
-  if (inputFile.is_open()) {
-    streampos inputSize = inputFile.tellg();
-    inputBuffer_ = new char[inputSize];
-    inputFile.seekg(0, ios::beg);
-    inputFile.read(inputBuffer_, inputSize);
-    inputFile.close();
-  }
   searchBuffer();
   return 0;
 }
@@ -52,16 +45,47 @@ int Search::searchString()
 int Search::searchBuffer()
 {
   ofstream outputFile(settings_.getOutputFileName());
-  Directory dir(settings_.getPath());
   int countFound{ 0 };
-  for (auto x : dir.getDirectory())
-  {
-    outputFile << x << endl;
-    countFound++;
-  }
+  Directory dir(settings_.getPath());
 
+  for (auto x : dir.getDirectory()) {
+    char* inputBuffer2 = nullptr;
+    readFileToMemory(inputBuffer2, x);
+
+    if (compare(inputBuffer_, inputBuffer2) == true) {
+      outputFile << x << endl;
+      countFound++;
+    }
+
+    if (inputBuffer2 != nullptr) delete inputBuffer2;
+  }
   outputFile.close();
-  cout << "Found: " << countFound << endl;
- 
+
+  return 0;
+}
+
+
+
+bool Search::compare(char * input1, char * input2)
+{
+
+
+  return false;
+}
+
+
+// Read file to memory, return size of memory block
+unsigned int Search::readFileToMemory(char * memoryBlock, const string & fileName)
+{
+  ifstream inputFile(fileName, ios::binary | ios::ate);
+
+  if (inputFile.is_open()) {
+    streampos inputSize = inputFile.tellg();
+    memoryBlock = new char[(unsigned int)inputSize];
+    inputFile.seekg(0, ios::beg);
+    inputFile.read(memoryBlock, inputSize);
+    inputFile.close();
+    return (unsigned int)inputSize;
+  }
   return 0;
 }

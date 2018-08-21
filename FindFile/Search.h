@@ -17,6 +17,8 @@
 
   private:
     int searchBuffer();
+    bool compare(char* input1, char* input2);
+    unsigned int readFileToMemory(char* memoryBlock, const string& fileName);
 
   private:
     Settings& settings_;

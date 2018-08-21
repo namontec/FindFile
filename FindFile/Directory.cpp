@@ -40,8 +40,8 @@ int Directory::getDirectoryStructure(const boost::filesystem::path& path, vector
         }
         // If not directory - add to vector
         else {
-          //boost::filesystem::path p1 = x.path();
-          directory.push_back(boost::filesystem::canonical(x.path()).string());
+          string pathToString = boost::filesystem::canonical(x.path()).string();
+          directory.push_back (pathToString);
         }
 
 
