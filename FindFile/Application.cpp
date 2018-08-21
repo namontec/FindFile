@@ -25,14 +25,7 @@ int Application::start(int args, char* argv[])
   Settings settings(args, argv);
 
   Search search(settings);
-  if (settings.getInputString() != "") {
-    search.searchString();
-  }
-  else {
-    search.searchFile();
-  }
-
-
+ 
 
   return 0;
 }
