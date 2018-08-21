@@ -16,9 +16,9 @@ Application::~Application()
 
 
 int Application::start(int args, char* argv[])
-{
+{ 
   if (args < 2) {
-    std::cout << "Usage: ff.exe -p <path> -m <mask> -i <input file> -o <output file>\n";
+    std::cout << "Usage: ff.exe -p <path> -m <mask> -i <input file> -s <input string> -o <output file>\n";
     return 1;
   }
 
