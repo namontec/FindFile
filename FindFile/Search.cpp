@@ -34,7 +34,6 @@ int Search::searchBuffer()
   for (auto x : dir.getDirectory()) {
     File inputFile2;
     inputFile2.loadFile(x);
-    cout << x << endl;
 
     if (inputFile_.compare(inputFile2) == true) {
       outputFile << x << endl;

@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
 
-#include "../FindFile/File.h"
+#include "../FindFile/Search.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 

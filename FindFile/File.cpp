@@ -35,9 +35,9 @@ int File::loadFile(const string& fileName)
 // Read string to memoryBuffer
 int File::loadString(const string & stringContent)
 {
-  size_ = stringContent.size() + 1;
-  memoryBuffer_ = new char[size_];
-  strcpy_s(memoryBuffer_, size_, stringContent.c_str()); 
+  size_ = stringContent.size();
+  memoryBuffer_ = new char[size_ + 1 ];
+  strcpy_s(memoryBuffer_, size_ + 1, stringContent.c_str()); 
   return 0;
 }
 
