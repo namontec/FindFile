@@ -1,7 +1,17 @@
 # FindFile
-### Command line utility for searching files
+#### version: 0.2
+Command line utility for searching string in files and folders
+## Build
+Uses `boost/filesystem`. You need install it to compile. I recommed use `vcpkg` to install boost.
 
-Usage: `ff.exe -p C:\Temp -m *.* -i StringInFile.txt -is SearchString -o Result.txt`
+`git clone https://github.com/namontec/FindFile.git`
+
+Open `findfile.sln` file in Visual Studio and build. For static build see [Simple tutorial on how to add proper tags to vcxproj files to enable vcpkg](http://nmeo.ru/blog/post/vcpkg-enable-static-linking)
+## Download
+FindFile, version 0.2, x86: [FindFile-0.2-win32.zip](http://nmeo.ru/storage/app/media/tools/FindFile-0.2-win32.zip)
+
+## Usage
+`ff.exe -p C:\Temp -m *.* -i StringInFile.txt -is SearchString -o Result.txt`
 
 `-p` path to files; 
 
@@ -12,13 +22,3 @@ Usage: `ff.exe -p C:\Temp -m *.* -i StringInFile.txt -is SearchString -o Result.
 
 `-o` results file.
 
----
-
-`-p` путь к обрабатываемой директории с файлами;
-
-`-m` маска имен файлов, в которых осуществляется поиск _(не реализовано)_;    
-
-`-i` путь к файлу с заданной подстрокой, 
-или `-is` строка для поиска;
-
-`-o` файл с результатами поиска.
